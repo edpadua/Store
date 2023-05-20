@@ -5,7 +5,7 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-principal:'Quicksand', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -30,6 +30,7 @@ a:hover {
 }
 
 body {
+  font-family: var(--font-principal);
   margin: 0;
   place-items: center;
   min-width: 320px;

@@ -10,8 +10,8 @@ import Rodape from '../Rodape';
 
 function Template() {
   return (
-    <div>
-       <Cabecalho/>
+    <div className={styles.container}>
+       <Cabecalho />
       <div className={styles['container-outlet']}>
         <Outlet />
       </div>
