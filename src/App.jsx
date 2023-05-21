@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import Cabecalho from './Componentes/Cabecalho'
+import Cabecalho from './Componentes/BarraDeNavegacao'
 
 function App() {
   

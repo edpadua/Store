@@ -2,29 +2,18 @@ import React from 'react'
 
 import styles from './Cabecalho.module.sass';
 
-import {FaStore} from "react-icons/fa"
-
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-
-import classNames from 'classnames';
-
-function Cabecalho() {
-    const location = useLocation();
-    const navigate = useNavigate();
-  return (
-    <nav className={styles.cabecalho}>   
-        <FaStore style={{ fontSize: '30px', color:"#ffffff"}} onClick={() => navigate('/')} />  
-        <div className={styles.links}>
-        <div>
-          <Link to='/' className={classNames(styles.link, {
-            [styles.selected]: location.pathname === '/'
-          })}>
-            Início
-          </Link>
-        </div>
-      </div> 
-    </nav>
-  )
+function Cabecalho({titulo, descricao, imagem, className}) {
+    return (
+        <header className={styles.cabecalho}>
+            <div className={styles.titulo}>
+                <h1>{titulo}</h1>
+                <h2>{descricao}</h2>
+            </div>
+            <div className={styles.imagem}>
+                <img alt={titulo} src={imagem}/>
+            </div>
+        </header>
+    )
 }
 
 export default Cabecalho
