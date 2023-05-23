@@ -1,15 +1,57 @@
 import React from 'react'
 
+import Produto from '../../Componentes/Produto';
+
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 import styles from './Categoria.module.sass';
 
-function Categoria() {
-  return (
-    <div>
-       <div className={styles.itens}>
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-       </div>
-    </div>
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
+
+
+function Categoria() {
+
+  const { nomeCategoria } = useParams();
+  const { categoria, produtos } = useSelector(state => {
+    const regexp = new RegExp(state.pesquisa, 'i');
+    return {
+      categoria: state.categorias.find(categoria => categoria.id === nomeCategoria),
+      produtos: state.produtos.filter(produto => produto.categoria === nomeCategoria && produto.titulo.match(regexp))
+    }
+  });
+
+  return (
+   
+      <div className={styles.itens}>
+        <Carousel responsive={responsive} infinite={true}>
+          {produtos?.map(produto => (
+            <Produto key={produto.id} {...produto} />
+          ))}
+        </Carousel>
+      </div>
+    
   )
 }
 

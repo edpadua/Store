@@ -15,8 +15,9 @@ function Inicio() {
     return (
         <div>
             <Cabecalho />
-            <div className={styles.categorias}>
-                <div >
+            <div className={styles.categorias}>          
+                         
+                <div className={styles.titulo} >
 
                     <h1>
                         Categorias
@@ -26,13 +27,13 @@ function Inicio() {
                 <ul className={styles['categorias-container']}>
                     {categorias.map((categoria, index) => (
                         <li className={styles.categoria_item} key={index} onClick={() => navigate(`/categoria/${categoria.id}`)}>
+                            
+        
+                            <img className={styles.categoria_img} src={categoria.thumbnail} alt={categoria.nome} />
                             <div className={styles.categoria_nome}>
                                 <h2>{categoria.nome}</h2>
                             </div>
                            
-        
-                            <img className={styles.categoria_img} src={categoria.thumbnail} alt={categoria.nome} />
-                            
                         </li>
                     ))}
                 </ul>

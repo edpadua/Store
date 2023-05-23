@@ -10,6 +10,17 @@ import Pesquisa from '../Pesquisa';
 
 import classNames from 'classnames';
 
+
+import {
+    RiShoppingCart2Line,
+    RiShoppingCartFill
+} from 'react-icons/ri';
+
+const iconeProps = {
+    color: 'white',
+    size: 24
+  }
+
 function BarraDeNavegacao() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -27,6 +38,14 @@ function BarraDeNavegacao() {
             </div>
             <div className={styles.pesquisa}>
                 <Pesquisa />
+            </div>
+            <div className={styles.icones}>
+                <Link to="/carrinho">
+                    {location.pathname === '/carrinho'
+                        ? <RiShoppingCartFill {...iconeProps} />
+                        : <RiShoppingCart2Line {...iconeProps} />
+                    }
+                </Link>
             </div>
         </nav>
     )

@@ -1,15 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
 import categoriasSlice from "./categorias"
-import itensSlice from './produtos';
+import produtosSlice from './produtos';
 import carrinhoSlice from './carrinho';
-import buscaSlice from './busca';
+import pesquisaSlice from './pesquisa';
 
 const loja = configureStore({
   reducer: {
     categorias: categoriasSlice,
-    itens: itensSlice,
+    produtos: produtosSlice,
     carrinho: carrinhoSlice,
-    busca: buscaSlice,
+    pesquisa: pesquisaSlice,
   }
 });
 

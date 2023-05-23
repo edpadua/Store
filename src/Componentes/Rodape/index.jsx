@@ -4,9 +4,9 @@ import styles from './Rodape.module.sass';
 
 function Rodape() {
   return (
-    <div>
+    <footer className={styles.rodape}>
       
-    </div>
+    </footer>
   )
 }
 
