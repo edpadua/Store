@@ -7,11 +7,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: [
-        "react-redux",
-        "@reduxjs/toolkit",
-        "react-uuid",
-        "react-multi-carousel",
-        "react-multi-carousel/lib/styles.css"
+        "../node_modules/react-redux/dist/react-redux", 
+        "../node_modules/@reduxjs/toolkit", 
+        "../node_modules/react-uuid",
+        "../node_modules/react-multi-carousel",
+        "../node_modules/react-multi-carousel/lib/styles.css"
       ],
     },
   },
