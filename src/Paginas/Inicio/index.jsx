@@ -5,12 +5,13 @@ import styles from './Inicio.module.sass';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import Cabecalho from '../../Componentes/Cabecalho';
+
 
 function Inicio() {
 
     const navigate = useNavigate();
     const categorias = useSelector(state => state.categorias);
+    
 
     return (
         <div>
