@@ -9,7 +9,8 @@ export default defineConfig({
       external: [
         "react-redux",
         "@reduxjs/toolkit",
-        "react-uuid"
+        "react-uuid",
+        "react-multi-carousel"
       ],
     },
   },
