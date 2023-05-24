@@ -10,7 +10,8 @@ export default defineConfig({
         "react-redux",
         "@reduxjs/toolkit",
         "react-uuid",
-        "react-multi-carousel"
+        "react-multi-carousel",
+        "react-multi-carousel/lib/styles.css"
       ],
     },
   },
