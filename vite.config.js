@@ -8,7 +8,8 @@ export default defineConfig({
     rollupOptions: {
       external: [
         "react-redux",
-        "@reduxjs/toolkit"
+        "@reduxjs/toolkit",
+        "react-uuid"
       ],
     },
   },
