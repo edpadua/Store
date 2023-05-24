@@ -7,16 +7,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { mudarCarrinho, mudarQuantidade } from '../../Loja/Reducers/carrinho';
 import classNames from 'classnames';
 
-import {
-    AiOutlineHeart,
-    AiFillHeart,
-    AiFillMinusCircle,
-    AiFillPlusCircle,
-} from 'react-icons/ai';
+import {AiFillMinusCircle, AiFillPlusCircle} from 'react-icons/ai';
+import {BsHandThumbsUpFill,BsHandThumbsUp} from 'react-icons/bs';
 
-import {
-    FaCartPlus
-  } from 'react-icons/fa';
+import {BsCartPlus} from 'react-icons/bs';
+import Cabecalho from '../Cabecalho';
 
 const iconeProps = {
     size: 24,
@@ -52,6 +47,8 @@ function Produto(props) {
     }
 
     return (
+        <>
+        <div className={styles.espaco}></div>
         <div className={styles.produto}>
             <div className={styles.produto_imagem_container}>
                 <img className={styles.produto_imagem} src={foto} alt={titulo} />
@@ -65,10 +62,10 @@ function Produto(props) {
                     <div className={styles.produto_preco}>
                         R$ {preco.toFixed(2)}
                     </div>
-                    <div className={styles.produto_acoes}>
+                    <div className={styles.produto_acao}>
                         {favorito
-                            ? <AiFillHeart {...iconeProps} color='#ff0000' className={styles['item-acao']} onClick={resolverFavorito} />
-                            : <AiOutlineHeart {...iconeProps} className={styles['item-acao']} onClick={resolverFavorito} />
+                            ? <BsHandThumbsUpFill {...iconeProps} color='#1b2ab8' className={styles['produto-acao']} onClick={resolverFavorito} />
+                            : <BsHandThumbsUp {...iconeProps}  className={styles['produto-acao']} onClick={resolverFavorito} />
                         }
                         {carrinho
                             ? (
@@ -89,10 +86,10 @@ function Produto(props) {
                                     />
                                 </div>
                             )
-                            : (<FaCartPlus
+                            : (<BsCartPlus
                                 {...iconeProps}
                                 color={estaNoCarrinho ? '#1875E8' : iconeProps.color}
-                                className={styles['item-acao']}
+                                className={styles['produto-acao']}
                                 onClick={resolverCarrinho}
                             />)
                         }
@@ -101,6 +98,7 @@ function Produto(props) {
             </div>
 
         </div>
+        </>
     )
 }
 

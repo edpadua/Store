@@ -13,6 +13,13 @@ import smartphoneMotorola from '../../assets/produtos/motorola-smartphone.jpg';
 import smartphoneSamsung from '../../assets/produtos/samsung-smartphone.jpg';
 import smartphoneSamsung2 from '../../assets/produtos/samsung-smartphone2.jpg';
 import smartphoneAsus from '../../assets/produtos/asus-smartphone.jpg';
+import tvLG from '../../assets/produtos/lg-tv.jpg';
+import tvSamsung from '../../assets/produtos/samsung-tv.jpg';
+import tvTLC from '../../assets/produtos/tlc-tv.jpg';
+import tvPhilips from '../../assets/produtos/philips-tv.jpg';
+import tvPhilco from '../../assets/produtos/philco-tv.jpg';
+
+
 
 
 const initialState = [{
@@ -119,6 +126,46 @@ const initialState = [{
   preco: 4100,
   id: uuid(),
   categoria: 'smartphone'
+},{
+  titulo: 'TV Samsung',
+  descricao: 'TV Samsung ...',
+  foto: tvSamsung,
+  favorito: false,
+  preco: 2800,
+  id: uuid(),
+  categoria: 'televisao'
+},{
+  titulo: 'TV LG',
+  descricao: 'TV LG ...',
+  foto: tvLG,
+  favorito: false,
+  preco: 2500,
+  id: uuid(),
+  categoria: 'televisao'
+},{
+  titulo: 'TV TLC',
+  descricao: 'TV TLC ...',
+  foto: tvTLC,
+  favorito: false,
+  preco: 1500,
+  id: uuid(),
+  categoria: 'televisao'
+},{
+  titulo: 'TV Philco',
+  descricao: 'TV Philco ...',
+  foto: tvPhilco,
+  favorito: false,
+  preco: 3500,
+  id: uuid(),
+  categoria: 'televisao'
+},{
+  titulo: 'TV Philips',
+  descricao: 'TV Philips ...',
+  foto: tvPhilips,
+  favorito: false,
+  preco: 2300,
+  id: uuid(),
+  categoria: 'televisao'
 }];
 
 const produtosSlice = createSlice({

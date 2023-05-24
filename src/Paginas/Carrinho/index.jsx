@@ -9,6 +9,7 @@ import { resetarCarrinho } from "../../Loja/Reducers/carrinho";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Cabecalho from '../../Componentes/Cabecalho';
 
 const responsive = {
   superLargeDesktop: {
@@ -54,6 +55,8 @@ function Carrinho() {
   });
 
   return (
+    <>
+    <Cabecalho titulo='Carrinho de compras'/>
     <div className={styles.carrinho}>
       <div className={styles.carrinho_produtos}>
         
@@ -64,7 +67,7 @@ function Carrinho() {
         <strong>
           Resumo da compra
         </strong>
-        <span>
+        <span className={styles.total_valor}>
           Subtotal: <strong> R$ {total.toFixed(2)} </strong>
         </span>
       </div>
@@ -75,6 +78,7 @@ function Carrinho() {
         Finalizar compra
       </button>
     </div>
+    </>
   )
 }
 

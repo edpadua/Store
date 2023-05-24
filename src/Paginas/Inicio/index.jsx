@@ -14,7 +14,6 @@ function Inicio() {
 
     return (
         <div>
-            <Cabecalho />
             <div className={styles.categorias}>          
                          
                 <div className={styles.titulo} >

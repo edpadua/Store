@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import notebookThumb from '../../assets/produtos/categorias/Notebook-thumb.jpg';
 import tabletThumb from '../../assets/produtos/categorias/Tablet-thumb.jpg';
 import smartphoneThumb from '../../assets/produtos/categorias/Smartphone-thumb.jpg';
+import televisaoThumb from '../../assets/produtos/categorias/Televisao-thumb.jpg';
 
 const initialState = [{
     nome: 'Notebook',
@@ -21,6 +22,13 @@ const initialState = [{
     header: smartphoneThumb,
     id: 'smartphone',
     descricao: 'Novidades em celulares por aqui'
+  },
+  {
+    nome: 'Televisão',
+    thumbnail: televisaoThumb,
+    header: televisaoThumb,
+    id: 'televisao',
+    descricao: 'As Tvs mais interativas você encontra aqui'
   }];
   
   const categoriasSlice = createSlice({

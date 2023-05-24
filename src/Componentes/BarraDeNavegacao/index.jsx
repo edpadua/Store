@@ -11,10 +11,7 @@ import Pesquisa from '../Pesquisa';
 import classNames from 'classnames';
 
 
-import {
-    RiShoppingCart2Line,
-    RiShoppingCartFill
-} from 'react-icons/ri';
+import {IoCartOutline,IoCartSharp} from 'react-icons/io5';
 
 const iconeProps = {
     color: 'white',
@@ -42,8 +39,8 @@ function BarraDeNavegacao() {
             <div className={styles.icones}>
                 <Link to="/carrinho">
                     {location.pathname === '/carrinho'
-                        ? <RiShoppingCartFill {...iconeProps} />
-                        : <RiShoppingCart2Line {...iconeProps} />
+                        ? <IoCartSharp {...iconeProps} />
+                        : <IoCartOutline {...iconeProps} />
                     }
                 </Link>
             </div>

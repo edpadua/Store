@@ -2,6 +2,7 @@ import React from 'react'
 
 import Produto from '../../Componentes/Produto';
 
+
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
@@ -9,6 +10,7 @@ import styles from './Categoria.module.sass';
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Cabecalho from '../../Componentes/Cabecalho';
 
 const responsive = {
   superLargeDesktop: {
@@ -43,7 +45,8 @@ function Categoria() {
   });
 
   return (
-   
+      <>
+      <Cabecalho titulo={nomeCategoria}/>
       <div className={styles.itens}>
         <Carousel responsive={responsive} infinite={true}>
           {produtos?.map(produto => (
@@ -51,7 +54,7 @@ function Categoria() {
           ))}
         </Carousel>
       </div>
-    
+      </>
   )
 }
 
