@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './Inicio.module.sass';
 
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector } from "../../../../node_modules/react-redux/" ;
 
 
 
