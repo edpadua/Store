@@ -32,9 +32,6 @@ The main purpose of this project is the use of Redux (react-redux) to manage glo
 ![image](https://github.com/edpadua/Store/assets/4975360/a96bb182-cc1a-4d12-9024-4dbe7fbb809b)
 
 
-
-### [🌐 Demo](to-do-list-edpadua.vercel.app)
-
 ### Technologies
 
 - [ReactJS](https://reactjs.org)
