@@ -1,0 +1,176 @@
+{
+    "categorias": [
+      {
+        "nome": "Notebook",
+        "thumbnail": "src/assets/produtos/categorias/Notebook-thumb.jpg",
+        "header": "src/assets/produtos/categorias/Notebook-thumb.jpg",
+        "id": "notebook",
+        "descricao": "Encontre os notebooks mais modernos"
+      }, {
+        "nome": "Tablet",
+        "thumbnail": "src/assets/produtos/categorias/Tablet-thumb.jpg",
+        "header": "src/assets/produtos/categorias/Tablet-thumb.jpg",
+        "id": "tablet",
+        "descricao": "Os melhores tablets do mercado"
+      }, {
+        "nome": "Smartphone",
+        "thumbnail": "src/assets/produtos/categorias/Smartphone-thumb.jpg",
+        "header": "src/assets/produtos/categorias/Smartphone-thumb.jpg",
+        "id": "smartphone",
+        "descricao": "Novidades em celulares por aqui"
+      }, {
+        "nome": "Televisao",
+        "thumbnail": "src/assets/produtos/categorias/Televisao-thumb.jpg",
+        "header": "src/assets/produtos/categorias/Televisao-thumb.jpg",
+        "id": "televisao",
+        "descricao": "As Tvs mais interativas você encontra aqui!"
+      }
+    ],
+    "produtos": [
+      {
+        "id": 1,
+        "titulo": "Notebook Dell",
+        "descricao": "Notebook Dell",
+        "foto": "../src/assets/produtos/dell-notebook.jpg",
+        "favorito": false,
+        "preco": 4000,
+        "categoria": "notebook"
+      }, {
+        "id": 2,
+        "titulo": "Notebook ASUS",
+        "descricao": "Notebook ASUS ...",
+        "foto": "../src/assets/produtos/asus-notebook.jpg",
+        "favorito": false,
+        "preco": 2500,
+        "categoria": "notebook"
+      }, {
+        "id": 3,
+        "titulo": "Notebook HP",
+        "descricao": "Notebook HP ...",
+        "foto": "../src/assets/produtos/hp-notebook.jpg",
+        "favorito": false,
+        "preco": 3000,
+        "categoria": "notebook"
+      }, {
+        "id": 4,
+        "titulo": "Notebook Acer",
+        "descricao": "Notebook Acer ...",
+        "foto": "../src/assets/produtos/acer-notebook.jpg",
+        "favorito": false,
+        "preco": 4500,
+        "categoria": "notebook"
+      }, {
+        "id": 5,
+        "titulo": "Notebook Samsung",
+        "descricao": "Notebook Samsung ...",
+        "foto": "../src/assets/produtos/samsung-notebook.jpg",
+        "favorito": false,
+        "preco": 3500,
+        "categoria": "notebook"
+      }, {
+        "id": 6,
+        "titulo": "IPad Apple",
+        "descricao": "IPad Apple ...",
+        "foto": "../src/assets/produtos/apple-tablet.jpg",
+        "favorito": false,
+        "preco": 10600,
+        "categoria": "tablet"
+      }, {
+        "id": 7,
+        "titulo": "Galaxy Tab",
+        "descricao": "Galaxy Tab ...",
+        "foto": "../src/assets/produtos/samsung-tablet.jpg",
+        "favorito": false,
+        "preco": 1500,
+        "categoria": "tablet"
+      }, {
+        "id": 8,
+        "titulo": "Tablet VAIO",
+        "descricao": "Tablet VAIO ...",
+        "foto": "../src/assets/produtos/vaio-tablet.jpg",
+        "favorito": false,
+        "preco": 1490.90,
+        "categoria": "tablet"
+      }, {
+        "id": 9,
+        "titulo": "IPhone 13",
+        "descricao": "IPhone 13 ...",
+        "foto": "../src/assets/produtos/apple-smartphone.jpg",
+        "favorito": false,
+        "preco": 3000,
+        "categoria": "smartphone"
+      }, {
+        "id": 10,
+        "titulo": "Moto G22",
+        "descricao": "Moto G22 ...",
+        "foto": "../src/assets/produtos/motorola-smartphone.jpg",
+        "favorito": false,
+        "preco": 2000,
+        "categoria": "smartphone"
+      }, {
+        "id": 11,
+        "titulo": "Galaxy A54",
+        "descricao": "Galaxy A54 ...",
+        "foto": "../src/assets/produtos/samsung-smartphone.jpg",
+        "favorito": false,
+        "preco": 2900,
+        "categoria": "smartphone"
+      }, {
+        "id": 12,
+        "titulo": "Galaxy S23",
+        "descricao": "Galaxy S23 ...",
+        "foto": "../src/assets/produtos/samsung-smartphone2.jpg",
+        "favorito": false,
+        "preco": 4300,
+        "categoria": "smartphone"
+      }, {
+        "id": 13,
+        "titulo": "Zenphone",
+        "descricao": "Zenphone ...",
+        "foto": "../src/assets/produtos/asus-smartphone.jpg",
+        "favorito": false,
+        "preco": 2800,
+        "categoria": "smartphone"
+      }, {
+        "id": 14,
+        "titulo": "TV Samsung",
+        "descricao": "TV Samsung ...",
+        "foto": "../src/assets/produtos/samsung-tv.jpg",
+        "favorito": false,
+        "preco": 2800,
+        "categoria": "televisao"
+      }, {
+        "id": 15,
+        "titulo": "TV LG",
+        "descricao": "TV LG ...",
+        "foto": "../src/assets/produtos/lg-tv.jpg",
+        "favorito": false,
+        "preco": 2500,
+        "categoria": "televisao"
+      }, {
+        "id": 16,
+        "titulo": "TV TLC",
+        "descricao": "TV TLC ...",
+        "foto": "../src/assets/produtos/tlc-tv.jpg",
+        "favorito": false,
+        "preco": 1500,
+        "categoria": "televisao"
+      }, {
+        "id": 17,
+        "titulo": "TV Philco",
+        "descricao": "TV Philco ...",
+        "foto": "../src/assets/produtos/philco-tv.jpg",
+        "favorito": false,
+        "preco": 3500,
+        "categoria": "televisao"
+      }, {
+        "id": 18,
+        "titulo": "TV Philips",
+        "descricao": "TV Philips ...",
+        "foto": "../src/assets/produtos/philips-tv.jpg",
+        "favorito": false,
+        "preco": 2300,
+        "categoria": "televisao"
+      }     
+    ]
+  }
