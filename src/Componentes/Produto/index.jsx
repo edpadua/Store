@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from "./Produto.module.sass";
 
-import { mudarFavorito } from "../../Loja/Reducers/produtos";
+import { deletarProduto, mudarProduto, mudarFavorito } from "../../Loja/Reducers/produtos";
 import { useDispatch, useSelector } from 'react-redux'; 
 import { mudarCarrinho, mudarQuantidade } from '../../Loja/Reducers/carrinho';
 import classNames from 'classnames';
