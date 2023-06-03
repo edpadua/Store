@@ -35,6 +35,8 @@ function Produto(props) {
         quantidade,
     } = props;
 
+    const [modoDeEdicao, setModoDeEdicao] = useState(false);
+
     const dispatch = useDispatch();
     const estaNoCarrinho = useSelector(state => state.carrinho.some(itemNoCarrinho => itemNoCarrinho.id === id));
 
