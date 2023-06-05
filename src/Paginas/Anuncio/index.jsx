@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import styles from module.sass
+import styles from "./Anuncio.module.sass"
 
 import Button from '../../Componentes/Button';
 

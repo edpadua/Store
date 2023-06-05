@@ -12,6 +12,9 @@ import { BsHandThumbsUpFill, BsHandThumbsUp, BsCheck } from 'react-icons/bs';
 import { BiEdit } from 'react-icons/bi';
 
 import { BsCartPlus } from 'react-icons/bs';
+
+import { CgCloseR } from 'react-icons/cg';
+
 import Cabecalho from '../Cabecalho';
 
 import Input from '../Input';
@@ -49,7 +52,15 @@ function Produto(props) {
     const componenteModoDeEdicao = <>
 
         {modoDeEdicao
-            ? <BsCheck {...iconeProps} onClick={() => setModoDeEdicao(false)} />
+            ? <BsCheck {...iconeProps}
+                className={styles['item-acao']}
+                onClick={() => {
+                    setModoDeEdicao(false);
+                    dispatch(mudarProduto({
+                        id,
+                        produto: { titulo: novoTitulo }
+                    }));
+                }} />
             : <BiEdit  {...iconeProps} onClick={() => setModoDeEdicao(true)} />
         }
     </>
@@ -65,65 +76,73 @@ function Produto(props) {
     return (
         <>
             <div className={styles.espaco}></div>
-            <div className={styles.produto}>
-                <div className={styles.produto_imagem_container}>
-                    <img className={styles.produto_imagem} src={foto} alt={titulo} />
-                </div>
-                <div className={styles.produto_descricao}>
-                    <div className={styles.produto_titulo}>
-                        {modoDeEdicao
-                            ? <Input
-                            value={novoTitulo}
-                            onChange={evento => setNovoTitulo(evento.target.value)}
-                          />
-                            : <h2>{titulo}</h2>
-                        }
-                        <p>{descricao}</p>
+            <div className={classNames(styles.produto, {
+                [styles.produtoNoCarrinho]: carrinho,
+            })}>
+                <div className={styles.produto}>
+                    <div className={styles.produto_imagem_container}>
+                        <img className={styles.produto_imagem} src={foto} alt={titulo} />
                     </div>
-                    <div className={styles.produto_informacoes}>
-                        <div className={styles.produto_preco}>
-                            R$ {preco.toFixed(2)}
+                    <CgCloseR   {...iconeProps}
+                        className={`${styles['produto-acao']} ${styles['produto-deletar']}`}
+                        onClick={() => dispatch(deletarProduto(id))}
+                    />
+                    <div className={styles.produto_descricao}>
+                        <div className={styles.produto_titulo}>
+                            {modoDeEdicao
+                                ? <Input
+                                    value={novoTitulo}
+                                    onChange={evento => setNovoTitulo(evento.target.value)}
+                                />
+                                : <h2>{titulo}</h2>
+                            }
+                            <p>{descricao}</p>
                         </div>
-                        <div className={styles.produto_acao}>
-                            {favorito
-                                ? <BsHandThumbsUpFill {...iconeProps} color='#1b2ab8' className={styles['produto-acao']} onClick={resolverFavorito} />
-                                : <BsHandThumbsUp {...iconeProps} className={styles['produto-acao']} onClick={resolverFavorito} />
-                            }
-                            {carrinho
-                                ? (
-                                    <div className={styles.quantidade}>
-                                        Quantidade:
-                                        <AiFillMinusCircle
-                                            {...quantidadeProps}
-                                            onClick={() => {
-                                                if (quantidade >= 1) {
-                                                    dispatch(mudarQuantidade({ id, quantidade: -1 }));
-                                                }
-                                            }}
-                                        />
-                                        <span>{String(quantidade || 0).padStart(2, '0')}</span>
-                                        <AiFillPlusCircle
-                                            {...quantidadeProps}
-                                            onClick={() => dispatch(mudarQuantidade({ id, quantidade: +1 }))}
-                                        />
-                                    </div>
-                                )
-                                : (
-                                    <>
-                                        <BsCartPlus
-                                            {...iconeProps}
-                                            color={estaNoCarrinho ? '#1875E8' : iconeProps.color}
-                                            className={styles['produto-acao']}
-                                            onClick={resolverCarrinho}
-                                        />
-                                        {componenteModoDeEdicao}
-                                    </>
-                                )
-                            }
+                        <div className={styles.produto_informacoes}>
+                            <div className={styles.produto_preco}>
+                                R$ {preco.toFixed(2)}
+                            </div>
+                            <div className={styles.produto_acao}>
+                                {favorito
+                                    ? <BsHandThumbsUpFill {...iconeProps} color='#1b2ab8' className={styles['produto-acao']} onClick={resolverFavorito} />
+                                    : <BsHandThumbsUp {...iconeProps} className={styles['produto-acao']} onClick={resolverFavorito} />
+                                }
+                                {carrinho
+                                    ? (
+                                        <div className={styles.quantidade}>
+                                            Quantidade:
+                                            <AiFillMinusCircle
+                                                {...quantidadeProps}
+                                                onClick={() => {
+                                                    if (quantidade >= 1) {
+                                                        dispatch(mudarQuantidade({ id, quantidade: -1 }));
+                                                    }
+                                                }}
+                                            />
+                                            <span>{String(quantidade || 0).padStart(2, '0')}</span>
+                                            <AiFillPlusCircle
+                                                {...quantidadeProps}
+                                                onClick={() => dispatch(mudarQuantidade({ id, quantidade: +1 }))}
+                                            />
+                                        </div>
+                                    )
+                                    : (
+                                        <>
+                                            <BsCartPlus
+                                                {...iconeProps}
+                                                color={estaNoCarrinho ? '#1875E8' : iconeProps.color}
+                                                className={styles['produto-acao']}
+                                                onClick={resolverCarrinho}
+                                            />
+                                            {componenteModoDeEdicao}
+                                        </>
+                                    )
+                                }
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </>
     )
