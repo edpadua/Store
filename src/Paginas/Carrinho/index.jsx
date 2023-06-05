@@ -10,6 +10,7 @@ import { resetarCarrinho } from "../../Loja/Reducers/carrinho";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Cabecalho from '../../Componentes/Cabecalho';
+import Button from '../../Componentes/Button';
 
 const responsive = {
   superLargeDesktop: {
@@ -56,28 +57,26 @@ function Carrinho() {
 
   return (
     <>
-    <Cabecalho titulo='Carrinho de compras'/>
-    <div className={styles.carrinho}>
-      <div className={styles.carrinho_produtos}>
-        
-        {carrinho?.map(produto => <Produto key={produto.id} {...produto} carrinho  />)}
+      <Cabecalho titulo='Carrinho de compras' />
+      <div className={styles.carrinho}>
+        <div className={styles.carrinho_produtos}>
 
+          {carrinho?.map(produto => <Produto key={produto.id} {...produto} carrinho />)}
+
+        </div>
+        <div className={styles.total}>
+          <strong>
+            Resumo da compra
+          </strong>
+          <span className={styles.total_valor}>
+            Subtotal: <strong> R$ {total.toFixed(2)} </strong>
+          </span>
+        </div>
+       
+        <Button onClick={() => dispatch(resetarCarrinho())}>
+          Finalizar compra
+        </Button>
       </div>
-      <div className={styles.total}>
-        <strong>
-          Resumo da compra
-        </strong>
-        <span className={styles.total_valor}>
-          Subtotal: <strong> R$ {total.toFixed(2)} </strong>
-        </span>
-      </div>
-      <button
-        className={styles.botao_finalizar}
-        onClick={() => dispatch(resetarCarrinho())}
-      >
-        Finalizar compra
-      </button>
-    </div>
     </>
   )
 }

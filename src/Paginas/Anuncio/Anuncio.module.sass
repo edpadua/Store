@@ -1,0 +1,25 @@
+.container
+    display: flex
+    flex: 1
+    flex-direction: column
+    justify-content: center
+
+.formulario
+    display: flex
+    flex-direction: column
+    gap: 25px
+    justify-content: center
+    margin: 15px auto
+    flex: 1
+    width: 65%
+    input, select
+        border: none
+        border-radius: 5px
+        font-size: 20px
+        outline: #213e55
+        transition: .2s ease-in-out
+        padding: 8px 15px
+    &:focus
+        outline: 2px solid #213e55
+    .input-erro
+        outline: 2px solid red

@@ -34,7 +34,8 @@ const responsive = {
 
 
 function Categoria() {
-
+  const navigate = useNavigate();
+ 
   const { nomeCategoria } = useParams();
   const { categoria, produtos } = useSelector(state => {
     const regexp = new RegExp(state.pesquisa, 'i');
@@ -45,8 +46,11 @@ function Categoria() {
   });
 
   return (
-      <>
-      <Cabecalho titulo={nomeCategoria}/>
+    <>
+      <Cabecalho titulo={nomeCategoria} />
+      <Button onClick={() => navigate(`/anuncie/${nomeCategoria}`)}>
+        Quero anunciar
+      </Button>
       <div className={styles.itens}>
         <Carousel responsive={responsive} infinite={true}>
           {produtos?.map(produto => (
@@ -54,7 +58,7 @@ function Categoria() {
           ))}
         </Carousel>
       </div>
-      </>
+    </>
   )
 }
 
