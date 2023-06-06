@@ -36,7 +36,7 @@ The main objective of this project is the use of Redux (react-redux) to manage g
 
 - [ReactJS](https://reactjs.org)
 - [Vite](https://vitejs.dev/guide/)
-- [Redux](https://www.npmjs.com/package/react-redux))
+- [Redux](https://www.npmjs.com/package/react-redux)
 - [JSON Server](https://www.npmjs.com/package/json-server)
 - [Axios](https://www.npmjs.com/package/axios)
 - [React Mult Carousel](https://www.npmjs.com/package/react-multi-carousel)
@@ -48,7 +48,9 @@ The main objective of this project is the use of Redux (react-redux) to manage g
 
 Terminal 1 
 
+```bash
 npm run server
+```
 
 Terminal 2
 
