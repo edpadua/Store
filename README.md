@@ -17,7 +17,7 @@
 
 This project consists of a part of the functionalities of a virtual store, more specifically, list of products, categories and shopping cart. The store's product categories are shown on the home page, the user clicks on one of the options and opens the page with the list of products in that category, in each of which there is the option to like the product and add it to the shopping cart. In the navigation bar there is a search field where the list of products will be filtered according to the keyword typed, beside a cart icon that, when clicked, will take the user to the shopping cart page with the products already added. In the shopping cart, a list of all products added is shown, with the possibility of changing the quantity of each item, at the bottom of the page, the subtotal is shown with the sum of the prices of all products and, just below, a button to complete the purchase, which in this example resets the shopping cart.
 
-The main purpose of this project is the use of Redux (react-redux) to manage global states. Among other libraries and technologies used are react-multi-carousel and the styles part with Sass.
+The main objective of this project is the use of Redux (react-redux) to manage global states, implement the Redux Thunk middleware which is also part of the library and is used to take the responsibility of asynchronous calls from the components. Another fundamental library in this application is the json-server to create a .json file, which will imitate a server with categories and products to be consumed as a REST API by the other Axios library. Among other libraries and technologies used are react-multi-carousel to display the product list, react-hook-form on the new product registration page and the styles part with Sass.
 
 ### Screeshot - Homepage
 
@@ -25,32 +25,46 @@ The main purpose of this project is the use of Redux (react-redux) to manage glo
 
 ### Screeshot - Category
 
-![image](https://github.com/edpadua/Store/assets/4975360/0d0c1a9e-b27e-4c88-8cb4-fd93ee0ed3e6)
+![image](https://github.com/edpadua/Store/assets/4975360/fe3b3c07-460a-4123-8a02-9e5234308e14)
 
 ### Screeshot - Shop Cart
 
-![image](https://github.com/edpadua/Store/assets/4975360/a96bb182-cc1a-4d12-9024-4dbe7fbb809b)
+![image](https://github.com/edpadua/Store/assets/4975360/52aae622-dd98-4d44-ba55-90ff66c50ac1)
+
+### Screeshot - Publish New Product
+
+![image](https://github.com/edpadua/Store/assets/4975360/018d4dff-7e99-451e-aa6a-5835b2016e88)
 
 
 ### Technologies
 
 - [ReactJS](https://reactjs.org)
 - [Vite](https://vitejs.dev/guide/)
-- [Redux](https://www.npmjs.com/package/react-redux))
+- [Redux](https://www.npmjs.com/package/react-redux)
+- [JSON Server](https://www.npmjs.com/package/json-server)
+- [Axios](https://www.npmjs.com/package/axios)
 - [React Mult Carousel](https://www.npmjs.com/package/react-multi-carousel)
 - [React Router](https://www.npmjs.com/package/react-router-dom)
 - [React Icons](https://react-icons.github.io/react-icons/)
+- [React Hook Form](https://www.npmjs.com/package/react-hook-form)
 
 ## Setup
+
+Terminal 1 
+
+```bash
+npm run server
+```
+
+Terminal 2
 
 ```bash
 git clone https://github.com/edpadua/Store
 
-cd todolist
+cd store
 npm i
 npm run dev
 ```
-
 
 ## License
 

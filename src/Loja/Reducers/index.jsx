@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import categoriasSlice from "./categorias"
+import categoriasSlice from "./categorias";
 import produtosSlice from './produtos';
 import carrinhoSlice from './carrinho';
 import pesquisaSlice from './pesquisa';
 
-const loja = configureStore({
+const store = configureStore({
   reducer: {
     categorias: categoriasSlice,
     produtos: produtosSlice,
@@ -13,4 +13,4 @@ const loja = configureStore({
   }
 });
 
-export default loja;
+export default store;

@@ -5,6 +5,7 @@ import Inicio from './Paginas/Inicio';
 import Template from './Componentes/Template';
 import Categoria from './Paginas/Categoria';
 import Carrinho from './Paginas/Carrinho';
+import Anuncio from './Paginas/Anuncio';
 
 function Router() {
     return (
@@ -14,6 +15,8 @@ function Router() {
                     <Route index element={<Inicio />} />
                     <Route path='/categoria/:nomeCategoria' element={<Categoria/>} />
                     <Route path='carrinho' element={<Carrinho/>} />
+                    <Route path='anuncio' element={<Anuncio />} />
+                    <Route path='anuncio/:nomeCategoria' element={<Anuncio />} />
                 </Route>
             </Routes>
         </BrowserRouter>

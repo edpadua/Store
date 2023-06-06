@@ -1,0 +1,31 @@
+@use "../../styles/variables"
+    
+    
+.container
+    display: flex
+    flex: 1
+    flex-direction: column
+    justify-content: center
+    padding-top: 100px
+    padding-bottom: 100px
+
+.formulario
+    display: flex
+    flex-direction: column
+    gap: 25px
+    justify-content: center
+    margin: 15px auto
+    flex: 1
+    width: 65%
+    select
+        border-width: 0.3px
+        border-radius: 8px
+        border-color: variables.$cor_principal
+        font-size: 20px
+        outline: #213e55
+        transition: .2s ease-in-out
+        padding: 8px 15px
+    &:focus
+        outline: 2px solid #213e55
+    .input-erro
+        outline: 2px solid red
