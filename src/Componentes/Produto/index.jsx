@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { mudarCarrinho, mudarQuantidade } from '../../Loja/Reducers/carrinho';
 import classNames from 'classnames';
 
+import { useState } from 'react';
+
 import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 import { BsHandThumbsUpFill, BsHandThumbsUp, BsCheck } from 'react-icons/bs';
 import { BiEdit } from 'react-icons/bi';
