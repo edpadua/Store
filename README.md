@@ -46,14 +46,19 @@ The main objective of this project is the use of Redux (react-redux) to manage g
 
 ## Setup
 
+Terminal 1 
+
+npm run server
+
+Terminal 2
+
 ```bash
 git clone https://github.com/edpadua/Store
 
-cd todolist
+cd store
 npm i
 npm run dev
 ```
-
 
 ## License
 
