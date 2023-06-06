@@ -81,7 +81,7 @@ function Produto(props) {
             <div className={classNames(styles.produto, {
                 [styles.produtoNoCarrinho]: carrinho,
             })}>
-                <div className={styles.produto}>
+                <div >
                     <div className={styles.produto_imagem_container}>
                         <img className={styles.produto_imagem} src={foto} alt={titulo} />
                     </div>

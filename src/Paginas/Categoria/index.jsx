@@ -50,7 +50,7 @@ function Categoria() {
   return (
     <>
       <Cabecalho titulo={nomeCategoria} />
-      <Button onClick={() => navigate(`/anuncie/${nomeCategoria}`)}>
+      <Button onClick={() => navigate(`/anuncio/${nomeCategoria}`)}>
         Quero anunciar
       </Button>
       <div className={styles.itens}>

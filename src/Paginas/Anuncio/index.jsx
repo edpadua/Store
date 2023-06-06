@@ -16,17 +16,15 @@ function Anuncio() {
     const dispatch = useDispatch();
     const { nomeCategoria = '' } = useParams();
     const categorias = useSelector(state => state.categorias.map(({ nome, id }) => ({ nome, id })));
-    const { register, handleSubmit, formState } = useForm({
+    const { register, handleSubmit} = useForm({
         defaultValues: {
             categoria: nomeCategoria
         }
     });
-    const { errors } = formState;
+   
 
     function cadastrar(parametro) {
         console.log('parametro: ', parametro);
-
-
     }
 
     console.log(register('novoInput'))
@@ -38,9 +36,15 @@ function Anuncio() {
                 <Input {...register('nome', { required: true })} placeholder='Digite o nome do produto' alt='nome do produto' />
                 <Input {...register('nome', { required: true })} placeholder='Digite a descrição do produto' alt='descrição do produto' />
                 <Input {...register('imagem', { required: true })} placeholder='Digite a URL da imagem do produto' alt='URL da imagem do produto' />
-                <select>
+                <select
                     {...register('categoria', { required: true })}
-                    disabled={nomeCategoria}
+                    disabled={nomeCategoria}>
+                    <option value='' disabled > Escolha a categoria </option>
+                    {categorias.map(categoria => (
+                        <option key={categoria.id} value={categoria.id}>
+                            {categoria.nome}
+                        </option>
+                    ))}
                 </select>
                 <Input {...register('preco', { required: true })} type='number' placeholder='Digite o preço do produto' />
                 <Button type='submit'>
