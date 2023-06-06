@@ -25,11 +25,15 @@ The main objective of this project is the use of Redux (react-redux) to manage g
 
 ### Screeshot - Category
 
-![image](https://github.com/edpadua/Store/assets/4975360/0d0c1a9e-b27e-4c88-8cb4-fd93ee0ed3e6)
+![image](https://github.com/edpadua/Store/assets/4975360/fe3b3c07-460a-4123-8a02-9e5234308e14)
 
 ### Screeshot - Shop Cart
 
-![image](https://github.com/edpadua/Store/assets/4975360/a96bb182-cc1a-4d12-9024-4dbe7fbb809b)
+![image](https://github.com/edpadua/Store/assets/4975360/52aae622-dd98-4d44-ba55-90ff66c50ac1)
+
+### Screeshot - Publish New Product
+
+![image](https://github.com/edpadua/Store/assets/4975360/018d4dff-7e99-451e-aa6a-5835b2016e88)
 
 
 ### Technologies
